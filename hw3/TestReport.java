@@ -1,5 +1,7 @@
 package hw3;
 
+import java.util.Objects;
+
 public class TestReport {
 
     private final int id;
@@ -29,6 +31,14 @@ public class TestReport {
         this.status = "SKIP";
         skipCount++;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        TestReport that = (TestReport) o;
+        return id == that.id && Objects.equals(suitName, that.suitName) && Objects.equals(status, that.status);
+    }
+
 
     public static String getSummary() {
         return String.format("Total: %d | Pass: %d | Fail: %d | Skip: %d | Rate: %.1f %%", totalCount, passCount, failCount, skipCount, (double) passCount / totalCount * 100);
