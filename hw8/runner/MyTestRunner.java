@@ -49,9 +49,9 @@ public class MyTestRunner {
         }
 
         // Step 4: Create list of test-method
+        List<Method> testMethods = new ArrayList<>();
         logger.info("Found " + testMethods.size() + " test methods");
         logger.fine("Initializing list of test-method");
-        List<Method> testMethods = new ArrayList<>();
         logger.fine("Looping through all methods");
         for (Method method : allMethods) {
             logger.finer("Checking method: " + method.getName());

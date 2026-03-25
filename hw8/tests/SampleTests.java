@@ -1,9 +1,10 @@
 package hw8.tests;
 
-import org.example.annotations.MyAfterEach;
-import org.example.annotations.MyBeforeEach;
-import org.example.annotations.MyDisabled;
-import org.example.annotations.MyTest;
+
+import hw8.annotations.MyAfterEach;
+import hw8.annotations.MyBeforeEach;
+import hw8.annotations.MyDisabled;
+import hw8.annotations.MyTest;
 
 // Этот класс - просто набор тестовых методов
 public class SampleTests {
