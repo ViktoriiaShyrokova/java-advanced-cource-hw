@@ -1,7 +1,7 @@
-package hw_exceptions.ex_1;
+package homeworks.lesson_11.task_1.exception;
 
 public class RequiredFieldException extends ValidationException {
     public RequiredFieldException(String fieldName) {
-        super(fieldName, "Field is required");
+        super(fieldName, null, "is required but was empty or null");
     }
 }
